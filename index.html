@@ -9,23 +9,44 @@
   </head>
   <body>
     <div class="header">
-      <img class="logo" src="./img/icon/logo.svg" alt="" />
-      <div class="header__block">
-        <h1 class="light__blue">round rock</h1>
-        <h3 class="light__blue">trush hauling</h3>
+      <div class="header__rough">
+        <img class="logo" src="./img/icon/logo.svg" alt="" />
+        <div class="header__rock">
+          <h1 class="light__blue">round rock</h1>
+          <h3 class="light__blue">trush hauling</h3>
+        </div>
       </div>
-      <div><p class="header__expert">experts</p></div>
+      <input class="checkbox" type="checkbox" id="label" />
+      <nav class="nav__list">
+        <ul class="nav__ul flex-column">
+          <li class="nav__li"><a class="nav__links" href="#">home</a></li>
+          <li class="nav__li"><a class="nav__links" href="#">services</a></li>
+          <li class="nav__li"><a class="nav__links" href="#">about</a></li>
+          <li class="nav__li">
+            <a class="nav__links" href="#">testymonials</a>
+          </li>
+          <li class="nav__li"><a class="nav__links" href="#">contact us</a></li>
+        </ul>
+      </nav>
+      <label class="label" for="label">
+        <span class="span__top"></span>
+        <span class="span__mid"></span>
+        <span class="span__bottom"></span>
+      </label>
       <div class="header__block">
-        <h1 class="gray">lorem</h1>
-        <h1 class="gray">lorem lorem</h1>
+        <div><p class="header__expert">experts</p></div>
+        <div>
+          <h1 class="lorem__h1 gray">lorem</h1>
+          <h1 class="lorem__h1 gray">lorem lorem</h1>
+        </div>
+        <p class="gray">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
+          voluptas quibusdam voluptatum possimus sunt minima temporibus,
+          laboriosam, iusto consectetur consequuntur alias similique eius id cum
+          doloribus labore. Hic, maiores consequatur.
+        </p>
+        <div class="btn__block"><button class="btn">help me</button></div>
       </div>
-      <p class="gray">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
-        voluptas quibusdam voluptatum possimus sunt minima temporibus,
-        laboriosam, iusto consectetur consequuntur alias similique eius id cum
-        doloribus labore. Hic, maiores consequatur.
-      </p>
-      <div class="btn__block"><button class="btn">help me</button></div>
     </div>
     <div class="about">
       <div class="about__left">
@@ -36,7 +57,9 @@
           deserunt expedita, provident est eius, ex voluptas repellendus sunt
           facere!
         </p>
-        <img class="about__img" src="./img/about.png" alt="" />
+        <div class="block">
+          <img class="about__img" src="./img/about.png" alt="" />
+        </div>
       </div>
       <div class="about__right">
         <h1>where</h1>
@@ -50,6 +73,8 @@
           hic atque itaque quos nihil debitis nemo in temporibus unde id tempora
           minima tempore.
         </p>
+      </div>
+      <div class="btn__block">
         <button class="btn yellow light__blue">help me</button>
       </div>
     </div>
@@ -57,7 +82,9 @@
       <h1>services</h1>
       <div class="services__block flex-column container">
         <div class="services__box">
-          <div class="img"><img src="./img/one.png" alt="" /></div>
+          <div class="img">
+            <img class="services__img" src="./img/one.png" alt="" />
+          </div>
           <h3>Lorem ipsum</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
@@ -68,7 +95,9 @@
           </p>
         </div>
         <div class="services__box">
-          <div class="img"><img src="./img/two.png" alt="" /></div>
+          <div class="img">
+            <img class="services__img" src="./img/two.png" alt="" />
+          </div>
           <h3>Lorem ipsum</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
@@ -79,7 +108,9 @@
           </p>
         </div>
         <div class="services__box">
-          <div class="img"><img src="./img/three.png" alt="" /></div>
+          <div class="img">
+            <img class="services__img" src="./img/three.png" alt="" />
+          </div>
           <h3>Lorem ipsum</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam

@@ -3,6 +3,10 @@
   margin: 0%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -23,29 +27,112 @@
 .services h1,
 .testymonials h1,
 .contact__us h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 /* NAVIGATION BAR */
+
+.nav__ul {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 10rem;
+  gap: 1rem;
+  position: absolute;
+  top: 6rem;
+  background: #fff;
+  z-index: 1;
+}
+
+.nav__ul:hover {
+  transform: scale(1, 1);
+}
+
+.nav__li {
+  margin-left: 1rem;
+  list-style: none;
+}
+
+.nav__links {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #6d91ee;
+  font-weight: bolder;
+  transition: all ease-in-out 0.5s;
+}
+
+.nav__links:hover {
+  font-size: 1.2rem;
+  padding: 1.2rem;
+  transition: all ease-in-out 0.2s;
+}
+
+.checkbox:checked ~ nav {
+  display: none;
+}
+
+.label {
+  display: block;
+  border: 3px solid #6d91ee;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all ease-in-out 0.5s;
+}
+
+.label:hover {
+  opacity: 1;
+  transition: all ease-in-out 0s;
+}
+
+.label span {
+  height: 4px;
+  position: absolute;
+  background: #6d91ee;
+  border-radius: 0.5rem;
+}
+
+.span__top {
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 1rem;
+}
+
+.span__mid {
+  top: 1.4rem;
+  width: 2rem;
+}
+
+.span__bottom {
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: 1rem;
+}
 
 /* NAVIGATION BAR END */
 
 /* header */
 
 .logo {
+  height: 3rem;
   width: 4rem;
-  /* border: 1px solid; */
-  margin-inline: 1rem;
 }
 
 .header {
-  background: url(./img/hero.png) no-repeat;
+  background: url(./img/hero.png) #e3dede;
   background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   /* border: 3px solid red; */
+}
+
+.header__rock {
+  margin-top: 1rem;
 }
 
 .header__expert {
@@ -60,10 +147,18 @@
 }
 
 .header__block {
-  gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  height: 80%;
+  width: 30rem;
+  position: relative;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.header__block h3 {
+.header__rock h3 {
   letter-spacing: 4px;
 }
 
@@ -97,42 +192,55 @@
 
 .about {
   height: 100vh;
+  background: url(./img/about-bg.png) center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-.about__left h1,
-.about__right h1 {
-  font-size: 3rem;
+.about__img {
+  width: 20rem;
 }
 
 .about > * {
   text-transform: capitalize;
   color: #fff;
-  padding-inline: 4rem;
+  /* padding-inline: 4rem; */
 }
 
-.about__left {
-  height: 50%;
-  background: url(./img/about-bg.png) no-repeat;
-  background-size: cover;
+.about__left,
+.about__right {
+  /* border: 2px solid red; */
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  text-align: center;
+  margin-top: 2rem;
+  gap: 1.5rem;
 }
 
-.about__img {
-  width: 15rem;
+.btn__block {
+  width: 100%;
+  /* border: 2px solid red; */
+  position: absolute;
+  left: 0;
+  top: 80%;
+  text-align: center;
+  z-index: 4;
 }
 
 .about__right {
-  height: 50%;
-  background: #6d91ee;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  text-align: center;
+  justify-content: center;
+}
+
+.about__left h1,
+.about__right h1 {
+  font-size: 3rem;
+  /* border: 2px solid red; */
 }
 
 .yellow {
@@ -141,6 +249,11 @@
 
 .gray {
   color: #4f4f4f;
+  text-align: center;
+}
+
+.lorem__h1 {
+  font-size: 3rem;
 }
 
 .light__blue {
@@ -293,4 +406,153 @@
   text-transform: capitalize;
 }
 
+/* desktop__view */
+
+@media screen and (min-width: 60rem) {
+  .checkbox:checked ~ nav {
+    display: block;
+  }
+
+  .header {
+    background: url(./img/hero.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .header__rough {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .nav__ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background: transparent;
+  }
+
+  /* about */
+  .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80vh;
+  }
+
+  .about::before {
+    content: "";
+    position: absolute;
+    left: 44%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 80vh;
+    background: #6d91ee;
+    transform: skewX(-35deg);
+    border-top-left-radius: 3rem;
+    z-index: 1;
+    /* overflow: hidden; */
+    /* left: 45.5%; */
+  }
+
+  .about::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 80vh;
+    background: #6d91ee;
+    z-index: 1;
+    /* overflow: hidden; */
+    border-top-left-radius: 10rem;
+  }
+
+  .about__left > *,
+  .about__right > * {
+    width: 20rem;
+  }
+
+  .about__right {
+    z-index: 2;
+  }
+
+  .about__right {
+    text-align: end;
+  }
+
+  .btn__block {
+    width: 100%;
+  }
+
+  /* services */
+
+  .services {
+    height: 100vh;
+  }
+
+  .services__img {
+    width: 17rem;
+  }
+
+  .services__box {
+    width: 17rem;
+  }
+
+  .services__block {
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid red; */
+  }
+
+  /* testymonials */
+
+  .testymonials {
+    height: 100vh;
+    /* border: 2px solid red; */
+  }
+
+  .testymonials__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* contact */
+
+  .contact__us {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact__bottom {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+  }
+
+  .contact__right {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* desktop__view__end*/
+
 /* contact__end */
+
+.checkbox {
+  display: none;
+}
